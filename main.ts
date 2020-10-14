@@ -3,8 +3,15 @@ input.onPinPressed(TouchPin.P0, function () {
     COUNTER = 0
     while (COUNTER <= 5) {
         basic.showNumber(COUNTER)
-        music.playTone(698, music.beat(BeatFraction.Half))
+        music.playTone(698, music.beat(BeatFraction.Whole))
         COUNTER += 1
+    }
+    basic.clearScreen()
+})
+input.onPinPressed(TouchPin.P1, function () {
+    for (let COUNTER = 0; COUNTER <= 5; COUNTER++) {
+        basic.showNumber(COUNTER)
+        music.playTone(698, music.beat(BeatFraction.Whole))
     }
 })
 input.onGesture(Gesture.Shake, function () {
