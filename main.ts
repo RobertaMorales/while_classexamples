@@ -1,4 +1,5 @@
 let COUNTER = 0
+let index = 0
 input.onPinPressed(TouchPin.P0, function () {
     COUNTER = 0
     while (COUNTER <= 5) {
@@ -7,6 +8,13 @@ input.onPinPressed(TouchPin.P0, function () {
         COUNTER += 1
     }
     basic.clearScreen()
+})
+input.onPinPressed(TouchPin.P2, function () {
+    index = 4
+    while (index >= 0) {
+        led.plot(index, index)
+        COUNTER += -1
+    }
 })
 input.onPinPressed(TouchPin.P1, function () {
     for (let COUNTER = 0; COUNTER <= 5; COUNTER++) {
